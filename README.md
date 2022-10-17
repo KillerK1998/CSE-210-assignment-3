@@ -17,7 +17,7 @@ If the player has no more parachute the game is over.
 ## stucture
 
 
-## Authers
+## Authors
 ---
 * Easton Pulver
 * Emory Hubbard
