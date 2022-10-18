@@ -8,8 +8,8 @@ class Director:
 
         self._player_guess = ""
         self._is_playing = True
-        self._jumper = Jumper()
-        self._word = Words()
+        self._jumper = jumper()
+        self._word = words()
 
     def start_game(self):
 
