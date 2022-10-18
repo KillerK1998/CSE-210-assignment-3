@@ -27,6 +27,6 @@ class Director:
 
     def do_outputs(self):
         pass
-    
+
 
 
