@@ -40,6 +40,6 @@ PARACHUTE_STATES = [
 def __init__(self):
     self.lines = 4
 def cut_line(self):
-    self.lines = self.lines -1
+    self.lines = self.lines - 1
 def draw(self):
     print(PARACHUTE_STATES(self.lines))
