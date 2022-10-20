@@ -38,7 +38,11 @@ class Director:
 
 
     def do_outputs(self):
-        pass
+        for i in len(self.letters()):
+            print('- ')
+        Jumper.draw()
+        
+
 
 
 
