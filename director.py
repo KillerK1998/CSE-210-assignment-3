@@ -1,5 +1,5 @@
 from director import director
-from jumper import Jumper
+from jumper import jumper
 from words import words
 from letter import letter
 
@@ -9,24 +9,30 @@ class Director:
 
         self._player_guess = ""
         self._is_playing = True
-        self._jumper = Jumper()
+        self._jumper = jumper()
         self._word = words()
+        self.letter = letter()
 
     def start_game(self):
 
         while self._is_playing:
-            self.get_inputs()
+            self.getUserGuess()
             self.do_updates()
             self.do_outputs()
 
-    def get_inputs(self):
-        pass
+    def getUserGuess():
+        user_guess = input("Guess a letter [a-z]: ")
+        return user_guess
 
     def do_updates(self):
         pass
 
     def do_outputs(self):
         pass
+    def win_condition():
+        #if self.user_guess == jumper_word
+        pass
+        
 
 
 
