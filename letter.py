@@ -1,11 +1,9 @@
 from words import words
 
-class letter:
-    user_guess = input("Guess a letter [a-z]: ")
+class Letter:
 
-    if user_guess == words:
-        print(user_guess)
-    else:
-        print("_")
+    def getUserGuess():
+        user_guess = input("Guess a letter [a-z]: ")
+        return user_guess
 
 
