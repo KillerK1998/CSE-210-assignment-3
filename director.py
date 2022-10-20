@@ -1,5 +1,5 @@
 from director import director
-from jumper import jumper
+from jumper import Jumper
 from words import words
 from letter import letter
 
@@ -9,7 +9,7 @@ class Director:
 
         self._player_guess = ""
         self._is_playing = True
-        self._jumper = jumper()
+        self._jumper = Jumper()
         self._word = words()
 
     def start_game(self):
