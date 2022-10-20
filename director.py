@@ -37,11 +37,18 @@ class Director:
             Jumper.cut_line()
 
 
-    def do_outputs(self):
+    def do_outputs(self, letters):
+        #create dashes for blank word
         for i in len(self.letters()):
             print('- ')
+        # draw jumper dude
         Jumper.draw()
+        # replace dash with letter if guess is correct
+        for i in len(self.letters()):
+            if self.player_guess == i:
+                letters.append(i)
         
+
 
 
 
