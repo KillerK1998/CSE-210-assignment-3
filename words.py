@@ -5,7 +5,7 @@ import random
 # Open the file in read mode
 class Words:
     def getRandom():
-        with open("words.txt", "r") as file:
+        with open("list.txt", "r") as file:
             allText = file.read()
             words = allText.split()
         

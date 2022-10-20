@@ -1,7 +1,6 @@
-from director import director
 from jumper import Jumper
-from words import words
-from letter import letter
+from words import Words
+from letter import Letter
 
 class Director:
 
@@ -10,7 +9,16 @@ class Director:
         self._player_guess = ""
         self._is_playing = True
         self._jumper = Jumper()
-        self._word = words()
+        self._word = Words.getRandom()
+        self._letters = self.makeLetters(self._word)
+
+    def makeLetters(self, word):
+        letters = []
+        for char in word:
+            letter = Letter()
+            letter.char = char
+            letters.append(letter)
+        return letters
 
     def start_game(self):
 
@@ -20,7 +28,7 @@ class Director:
             self.do_outputs()
 
     def get_inputs(self):
-        pass
+        self.player_guess = Letter.getUserGuess()
 
     def do_updates(self):
         pass
