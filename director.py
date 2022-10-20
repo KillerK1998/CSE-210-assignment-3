@@ -5,8 +5,7 @@ from letter import Letter
 class Director:
 
     def __init__(self):
-
-        self._player_guess = letter()
+        self.player_guess = None
         self._is_playing = True
         self._jumper = Jumper()
         self._word = Words.getRandom()
@@ -23,7 +22,7 @@ class Director:
     def start_game(self):
 
         while self._is_playing:
-            self.getUserGuess()
+            self.get_inputs()
             self.do_updates()
             self.do_outputs()
 
