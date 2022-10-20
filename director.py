@@ -7,7 +7,7 @@ class Director:
 
     def __init__(self):
 
-        self._player_guess = ""
+        self._player_guess = letter()
         self._is_playing = True
         self._jumper = jumper()
         self._word = words()
@@ -29,10 +29,6 @@ class Director:
 
     def do_outputs(self):
         pass
-    def win_condition():
-        #if self.user_guess == jumper_word
-        pass
-        
 
 
 
