@@ -3,9 +3,10 @@
 import random
   
 # Open the file in read mode
-with open("words.txt", "r") as file:
-    allText = file.read()
-    words = allText.split()
-  
-    # print random string
-    print(random.choice(words))
+class Words:
+    def getRandom():
+        with open("words.txt", "r") as file:
+            allText = file.read()
+            words = allText.split()
+        
+            return random.choice(words)
