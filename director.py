@@ -30,7 +30,11 @@ class Director:
         self.player_guess = Letter.getUserGuess()
 
     def do_updates(self):
-        pass
+        if self.player_guess == self.letters:
+            self.player_guess = True
+        else:
+            self.player_guess = False
+
 
     def do_outputs(self):
         pass
