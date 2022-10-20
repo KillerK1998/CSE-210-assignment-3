@@ -1,5 +1,3 @@
-from words import words
-
 class Letter:
 
     def getUserGuess():
