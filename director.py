@@ -34,6 +34,7 @@ class Director:
             self.player_guess = True
         else:
             self.player_guess = False
+            Jumper.cut_line()
 
 
     def do_outputs(self):
