@@ -30,6 +30,8 @@ class Director:
         self.player_guess = Letter.getUserGuess()
 
     def do_updates(self):
+        # if player guess is the same as the letter, the guess is true, else it is false
+        # and the cut line function gets called
         if self.player_guess == self.letters:
             self.player_guess = True
         else:
