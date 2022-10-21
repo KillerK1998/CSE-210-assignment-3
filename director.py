@@ -9,9 +9,9 @@ class Director:
         self._is_playing = True
         self._jumper = Jumper()
         self._word = Words.getRandom()
-        self._letters = self.makeLetters(self._word)
+        self._letters = Director.make_letters(self._word)
 
-    def makeLetters(self, word):
+    def make_letters(word):
         letters = []
         for char in word:
             letter = Letter()
@@ -49,6 +49,22 @@ class Director:
         for i in len(self.letters()):
             if self.player_guess == i:
                 letters.append(i)
+
+    def draw_letters(letters):
+        letter_line = Director.make_letter_line(letters)
+        print(letter_line)
+
+    def make_letter_line(letters):
+        letter_line = ""
+        for letter in letters:
+            if letter.guessed == True:
+                letter_line += letter.char
+            else:
+                letter_line += "_"
+            letter_line += " "
+        return letter_line
+
+
         
 
 
