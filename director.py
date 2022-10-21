@@ -41,28 +41,13 @@ class Director:
 
     def do_outputs(self, letters):
         #create dashes for blank word
-        for i in len(self.letters()):
-            print('- ')
+        Letter.draw_letters()
         # draw jumper dude
         Jumper.draw()
         # replace dash with letter if guess is correct
         for i in len(self.letters()):
             if self.player_guess == i:
                 letters.append(i)
-
-    def draw_letters(letters):
-        letter_line = Director.make_letter_line(letters)
-        print(letter_line)
-
-    def make_letter_line(letters):
-        letter_line = ""
-        for letter in letters:
-            if letter.guessed == True:
-                letter_line += letter.char
-            else:
-                letter_line += "_"
-            letter_line += " "
-        return letter_line
 
 
         
