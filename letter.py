@@ -8,10 +8,6 @@ class Letter:
         user_guess = input("Guess a letter [a-z]: ")
         return user_guess
     
-    def draw_letters(letters):
-        letter_line = Director.make_letter_line(letters)
-        print(letter_line)
-
     def make_letter_line(letters):
         letter_line = ""
         for letter in letters:
@@ -21,5 +17,11 @@ class Letter:
                 letter_line += "_"
             letter_line += " "
         return letter_line
+
+    def draw_letters(letters):
+        letter_line = Letter.make_letter_line(letters)
+        print(letter_line)
+
+   
 
 
