@@ -39,7 +39,15 @@ PARACHUTE_STATES = [
 class Jumper:
     def __init__(self):
         self.lines = 4
+
     def cut_line(self):
         self.lines = self.lines - 1
+
     def draw(self):
         print(PARACHUTE_STATES(self.lines))
+        
+    def is_dead(self):
+        is_dead = False
+        if self.lines <= 0:
+            is_dead = True
+        return is_dead
