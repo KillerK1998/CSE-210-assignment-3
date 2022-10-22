@@ -9,7 +9,7 @@ class Director:
         self._is_playing = True
         self._jumper = Jumper()
         self._word = Words.getRandom()
-        self._letters = Director.make_letters(self._word)
+        self._letters = Letter.draw_letters(self._word)
 
     def make_letters(word):
         letters = []
@@ -48,6 +48,7 @@ class Director:
         for i in len(self.letters()):
             if self.player_guess == i:
                 letters.append(i)
+    
     def has_won(self):
         has_won = True
         
