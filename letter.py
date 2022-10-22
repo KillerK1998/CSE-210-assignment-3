@@ -22,6 +22,13 @@ class Letter:
         letter_line = Letter.make_letter_line(letters)
         print(letter_line)
 
+    def update_letters():
+        player_guess = Letter.getUserGuess()
+        word_length = Letter.draw_letters()
+
+        
+
+
    
 
 
