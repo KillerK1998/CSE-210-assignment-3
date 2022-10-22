@@ -22,6 +22,19 @@ class Letter:
         letter_line = Letter.make_letter_line(letters)
         print(letter_line)
 
+    def update_letters(char, letters):
+        for letter in letters:
+            if letter.char == char:
+                letter.guessed = True
+
+    def is_correct(char, letters):
+        is_correct = False
+
+        for letter in letters:
+            if letter.char == char:
+                is_correct = True
+
+        return is_correct
    
 
 

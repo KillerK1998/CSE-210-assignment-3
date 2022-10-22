@@ -44,7 +44,7 @@ class Jumper:
         self.lines = self.lines - 1
 
     def draw(self):
-        print(PARACHUTE_STATES(self.lines))
+        print(PARACHUTE_STATES[self.lines])
         
     def is_dead(self):
         is_dead = False

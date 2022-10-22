@@ -9,14 +9,16 @@ class Director:
         self._is_playing = True
         self._jumper = Jumper()
         self._word = Words.getRandom()
-        self.make_letters()
+        print(self._word)
+        self._letters = Director.make_letters(self._word)
 
-    def make_letters(self):
-        self._letters = []
-        for char in self._word:
+    def make_letters(word):
+        letters = []
+        for char in word:
             letter = Letter()
             letter.char = char
-            self._letters.append(letter)
+            letters.append(letter)
+        return letters
 
     def start_game(self):
 
@@ -31,22 +33,24 @@ class Director:
     def do_updates(self):
         # if player guess is the same as the letter, the guess is true, else it is false
         # and the cut line function gets called
-        if self.player_guess == self.letters:
-            self.player_guess = True
-        else:
-            self.player_guess = False
-            Jumper.cut_line()
+        Letter.update_letters(self.player_guess, self._letters)
+        Director.update_Jumper(self.player_guess, self._letters, self._jumper)
+        
+    def update_Jumper(guess, letters, jumper):
+        if not Letter.is_correct(guess, letters):
+            jumper.cut_line()
 
-
-    def do_outputs(self, letters):
+    def do_outputs(self):
         #create dashes for blank word
-        Letter.draw_letters()
+        print(Letter.draw_letters(self._letters))
         # draw jumper dude
-        Jumper.draw()
+        self._jumper.draw()
         # replace dash with letter if guess is correct
-        for i in len(self.letters()):
-            if self.player_guess == i:
-                letters.append(i)
+        if self._jumper.is_dead():
+            self._is_playing = False
+        if self.has_won():
+            self._is_playing = False
+            print("Congratulations!")
     
     def has_won(self):
         has_won = True
@@ -58,7 +62,8 @@ class Director:
         return has_won
 
         
-
+letters = Director.make_letters("banjo")
+Letter.update_letters("a", letters)
 
 
 
