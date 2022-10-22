@@ -41,7 +41,7 @@ class Director:
 
     def do_outputs(self):
         #create dashes for blank word
-        print(Letter.draw_letters(self._letters))
+        Letter.draw_letters(self._letters)
         # draw jumper dude
         self._jumper.draw()
         # replace dash with letter if guess is correct
