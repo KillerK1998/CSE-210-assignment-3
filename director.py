@@ -20,6 +20,7 @@ class Director:
         return letters
 
     def start_game(self):
+        self._jumper.draw()
 
         while self._is_playing:
             self.get_inputs()
