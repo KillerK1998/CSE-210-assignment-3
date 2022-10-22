@@ -61,6 +61,7 @@ class Director:
         
         return has_won
 
+
         
 letters = Director.make_letters("banjo")
 Letter.update_letters("a", letters)
