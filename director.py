@@ -48,7 +48,14 @@ class Director:
         for i in len(self.letters()):
             if self.player_guess == i:
                 letters.append(i)
-
+    def has_won(self):
+        has_won = True
+        
+        for letter in self._letters:
+            if letter.guessed == False:
+                has_won = False
+        
+        return has_won
 
         
 
