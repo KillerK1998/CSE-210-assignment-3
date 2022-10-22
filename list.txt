@@ -1,5 +1,5 @@
-Kaboom
-Rubber
-Duck
-King
-Queen
+kaboom
+rubber
+duck
+king
+queen
