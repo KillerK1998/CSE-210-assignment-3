@@ -9,7 +9,7 @@ class Director:
         self._is_playing = True
         self._jumper = Jumper()
         self._word = Words.getRandom()
-        self._letters = Letter.draw_letters(self._word)
+        self._letters = Letter._letters(self._word)
 
     def make_letters(word):
         letters = []
